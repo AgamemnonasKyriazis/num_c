@@ -66,3 +66,9 @@ Calculates the determinant of a matrix !unoptimized!
 
 * matrix_t *inverse(matrix_t *m_t1);
 Calculates the inverse of a matrix !unoptimized!
+
+### Compiling
+Compile with
+```
+~gcc your_program.c num_c.c -lm 
+```
