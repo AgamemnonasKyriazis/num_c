@@ -5,7 +5,9 @@ int main() {
     printm(m_t1);
     matrix_t *m_t2 = ones(4, 4);
     printf("\n");
-    matrix_t *m_t3 = adds(sub(m_t1, m_t2), 7.0f);
+
+    matrix_t *m_t3 = sub(m_t1, m_t2);
+    matrix_t *m_t5 = adds(m_t3, 7.0f);
     printm(m_t3);
     printf("\n");
     double temp = 0;
@@ -24,5 +26,12 @@ int main() {
     matrix_t *alpha = inverse(m_t3);
     printm(alpha);
     printf("\n");
-    printm(multiply(alpha, m_t3));
+    matrix_t *m_t4 = multiply(alpha, m_t3);
+    printm(m_t4);
+    releasem(m_t1);
+    releasem(m_t2);
+    releasem(m_t3);
+    releasem(m_t5);
+    releasem(m_t4);
+    releasem(alpha);
 }
