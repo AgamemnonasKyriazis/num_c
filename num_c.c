@@ -20,6 +20,7 @@ void releasem(matrix_t *m_t) {
     while(i) {
         free(m_t->matrix[--i]);
     }
+    free(m_t->matrix);
     free(m_t);
 }
 
