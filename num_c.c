@@ -404,5 +404,7 @@ matrix_t *inverse(matrix_t *m_t1) {
         eliminate(m_alpha->matrix[i], m_alpha->matrix[i], i, m_alpha->collumns, 1, m_identity->matrix[i], m_identity->matrix[i]);
     }
 
+    releasem(m_alpha);
+
     return m_identity;
 }
